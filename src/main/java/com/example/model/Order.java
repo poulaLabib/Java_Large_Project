@@ -5,8 +5,7 @@ import java.time.LocalDateTime;
 import java.util.List;
 import java.util.ArrayList;
 
-public class Order {
-    private Long id;
+public class Order extends BaseEntity {
     private User user;
     private List<OrderItem> items = new ArrayList<>();
     private BigDecimal totalAmount;
@@ -18,8 +17,6 @@ public class Order {
         this.status = OrderStatus.PENDING;
     }
 
-    public Long getId() { return id; }
-    public void setId(Long id) { this.id = id; }
     public User getUser() { return user; }
     public void setUser(User user) { this.user = user; }
     public List<OrderItem> getItems() { return items; }

@@ -3,8 +3,7 @@ package com.example.model;
 import java.math.BigDecimal;
 import java.time.LocalDateTime;
 
-public class Payment {
-    private Long id;
+public class Payment extends BaseEntity {
     private Order order;
     private BigDecimal amount;
     private PaymentMethod method;
@@ -13,8 +12,6 @@ public class Payment {
 
     public Payment() {}
 
-    public Long getId() { return id; }
-    public void setId(Long id) { this.id = id; }
     public Order getOrder() { return order; }
     public void setOrder(Order order) { this.order = order; }
     public BigDecimal getAmount() { return amount; }

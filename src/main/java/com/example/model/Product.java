@@ -2,8 +2,7 @@ package com.example.model;
 
 import java.math.BigDecimal;
 
-public class Product {
-    private Long id;
+public class Product extends BaseEntity {
     private String name;
     private String description;
     private BigDecimal price;
@@ -13,15 +12,13 @@ public class Product {
     public Product() {}
 
     public Product(Long id, String name, String description, BigDecimal price, int quantity) {
-        this.id = id;
+        setId(id);
         this.name = name;
         this.description = description;
         this.price = price;
         this.quantity = quantity;
     }
 
-    public Long getId() { return id; }
-    public void setId(Long id) { this.id = id; }
     public String getName() { return name; }
     public void setName(String name) { this.name = name; }
     public String getDescription() { return description; }
